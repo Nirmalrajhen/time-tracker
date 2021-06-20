@@ -7,5 +7,11 @@ pipeline {
                 bat "mvn clean -f time-tracker"
             }
         }
+        stage('test'){
+            steps{
+                bat "mvn test -f time-tracker"
+            }
+        }
+            
     }
 }
