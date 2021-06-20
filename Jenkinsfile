@@ -13,6 +13,10 @@ pipeline {
                 bat "mvn test -f time-tracker"
             }
         }
-            
+         stage('build'){
+            steps{
+                bat "mvn package -f time-tracker"
+            }
+        }   
     }
 }
