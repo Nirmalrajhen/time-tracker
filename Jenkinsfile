@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('git repo'){
             steps{
+                bat "rmdir /s /q time-tracker"
                 bat "git clone https://github.com/Nirmalrajhen/time-tracker.git"
                 bat "mvn clean -f time-tracker"
             }
